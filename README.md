@@ -1,5 +1,7 @@
 # format-json-stream [![build status](https://secure.travis-ci.org/thlorenz/format-json-stream.png)](http://travis-ci.org/thlorenz/format-json-stream)
 
+[![browser support](https://ci.testling.com/thlorenz/format-json-stream.png)](https://ci.testling.com/thlorenz/format-json-stream)
+
 Formats a JSON stream to make it more readable by adding proper indentation and newlines.
 
 ```js
