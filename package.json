@@ -1,0 +1,26 @@
+{
+    "name" : "format-json-stream",
+    "version" : "0.0.0",
+    "description" : "Formats a JSON stream to make it more readable by adding proper indentation and newlines.",
+    "main" : "format-json-stream.js",
+    "scripts" : {
+        "test" : "tap test/*.js"
+    },
+    "repository" : {
+        "type" : "git",
+        "url" : "git://github.com/thlorenz/format-json-stream.git"
+    },
+    "homepage" : "https://github.com/thlorenz/format-json-stream",
+    "dependencies" : {
+    },
+    "devDependencies" : {
+    },
+    "keywords": [] ,
+    "author" : {
+        "name" : "Thorsten Lorenz",
+        "email" : "thlorenz@gmx.de",
+        "url" : "http://thlorenz.com"
+    },
+    "license" : "MIT",
+    "engine" : { "node" : ">=0.6" }
+}
