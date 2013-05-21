@@ -17,6 +17,6 @@ test('errornous json', function (t) {
   
   function ondata(d) { data += d }
   function onend() {
-    t.equal(data, 'SyntaxError: Unexpected token }')
+    t.ok(~data.indexOf('SyntaxError: '))
   }
 })
