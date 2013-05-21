@@ -4,6 +4,8 @@
 
 Formats a JSON stream to make it more readable by adding proper indentation and newlines.
 
+## As Commandline Tool
+
 ```sh
 # default indent 2
 curl https://raw.github.com/thlorenz/format-json-stream/master/package.json | format-json-stream | head -n 20
@@ -14,6 +16,8 @@ curl https://raw.github.com/thlorenz/format-json-stream/master/package.json | fo
 # indent 4
 curl https://raw.github.com/thlorenz/format-json-stream/master/package.json | format-json-stream -i 4 | head -n 20
 ```
+
+## As Library
 
 ```js
 var format = require('format-json-stream')
