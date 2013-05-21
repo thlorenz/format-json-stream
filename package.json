@@ -16,7 +16,8 @@
   },
   "devDependencies": {
     "tape": "~1.0.2",
-    "tap": "~0.4.3"
+    "tap": "~0.4.3",
+    "string2stream": "git://github.com/thlorenz/string2stream"
   },
   "keywords": [],
   "author": {

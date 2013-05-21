@@ -1,11 +1,10 @@
 'use strict';
 
-// TODO: separate module
 var through = require('through');
 
-var formatStream = module.exports = function (sin) {
+var formatStream = module.exports = function (indent) {
   var data = '';
-  return sin.pipe(through(ondata, onend));
+  return through(ondata, onend);
 
   function ondata(d) {
     data += d;
@@ -14,12 +13,12 @@ var formatStream = module.exports = function (sin) {
   function onend() {
     try {
       var json = JSON.parse(data);
-      this.queue(JSON.stringify(json, null, 2));
+      this.queue(JSON.stringify(json, null, indent || 2));
     } catch (e) {
-      this.queue(e);
+
+      this.queue(e.toString());
     }
     this.emit('end');
   }
 };
 
-formatStream(require('fs').createReadStream(__dirname, 'test/fixtures/one-line.json', { encoding: 'utf-8' });
