@@ -1,6 +1,6 @@
 {
   "name": "format-json-stream",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Formats a JSON stream to make it more readable by adding proper indentation and newlines.",
   "main": "format-json-stream.js",
   "bin": "./bin/format-json-stream.js",
