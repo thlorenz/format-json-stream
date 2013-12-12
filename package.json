@@ -13,12 +13,13 @@
   },
   "homepage": "https://github.com/thlorenz/format-json-stream",
   "dependencies": {
-    "through": "~2.3.4"
+    "through": "~2.3.4",
+    "string2stream": "0.0.2",
+    "apply-transform": "~0.1.1"
   },
   "devDependencies": {
     "tape": "~1.0.2",
-    "tap": "~0.4.3",
-    "string2stream": "git://github.com/thlorenz/string2stream"
+    "tap": "~0.4.3"
   },
   "keywords": [
     "format",

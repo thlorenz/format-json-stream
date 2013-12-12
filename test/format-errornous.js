@@ -2,9 +2,8 @@
 /*jshint asi: true */
 
 var test          =  require('tape').test
-var formatStream  =  require('..')
-var string2Stream =  require('string2stream')
-var through       =  require('through')
+var formatStream  =  require('../')
+var applyTransform = require('apply-transform');
 var json = 
     '{ "name": "format-json-stream", '
   + '"version": "0.0.0", }'
@@ -12,11 +11,8 @@ var json =
 
 test('errornous json', function (t) {
   t.plan(1)
-  var data = ''
-  string2Stream(json).pipe(formatStream()).pipe(through(ondata, onend))
-  
-  function ondata(d) { data += d }
-  function onend() {
+  applyTransform(formatStream(), json, function (err, data) {
+    if (err) { t.fail(err); t.end(); }
     t.ok(~data.indexOf('SyntaxError: '))
-  }
+  })
 })

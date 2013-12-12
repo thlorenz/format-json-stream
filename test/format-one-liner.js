@@ -2,9 +2,8 @@
 /*jshint asi: true */
 
 var test          =  require('tape').test
-var formatStream  =  require('..')
-var string2Stream =  require('string2stream')
-var through       =  require('through')
+var formatStream  =  require('../')
+var applyTransform = require('apply-transform');
 var json = 
     '{ "name": "format-json-stream", '
   + '"version": "0.0.0",'
@@ -12,11 +11,8 @@ var json =
 
 test('indent default 2', function (t) {
   t.plan(1)
-  var data = ''
-  string2Stream(json).pipe(formatStream()).pipe(through(ondata, onend))
-  
-  function ondata(d) { data += d }
-  function onend() {
+  applyTransform(formatStream(), json, function (err, data) {
+    if (err) { t.fail(err); t.end(); }
     t.equal(
         data
       , [ '{'
@@ -29,16 +25,13 @@ test('indent default 2', function (t) {
         , '}'
         ].join('\n')
     )
-  }
+  })
 })
 
 test('indent 4', function (t) {
   t.plan(1)
-  var data = ''
-  string2Stream(json).pipe(formatStream(4)).pipe(through(ondata, onend))
-  
-  function ondata(d) { data += d }
-  function onend() {
+  applyTransform(formatStream(4), json, function (err, data) {
+    if (err) { t.fail(err); t.end(); }
     t.equal(
         data
       , [ '{'
@@ -51,5 +44,5 @@ test('indent 4', function (t) {
         , '}'
         ].join('\n')
     )
-  }
+  })
 })
