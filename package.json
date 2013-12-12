@@ -20,7 +20,7 @@
     "tap": "~0.4.3",
     "string2stream": "git://github.com/thlorenz/string2stream"
   },
-  "keywords": [],
+  "keywords": [ "format", "json", "stream", "streaming", "pretty", "prettify" ],
   "author": {
     "name": "Thorsten Lorenz",
     "email": "thlorenz@gmx.de",
