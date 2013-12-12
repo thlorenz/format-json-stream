@@ -1,7 +1,7 @@
 'use strict';
 /*jshint asi: true */
 
-var test          =  require('tape').test
+var test          =  require('tape')
 var formatStream  =  require('../')
 var applyTransform = require('apply-transform');
 var json = 

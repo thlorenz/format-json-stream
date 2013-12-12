@@ -18,8 +18,8 @@
     "apply-transform": "~0.1.1"
   },
   "devDependencies": {
-    "tape": "~1.0.2",
-    "tap": "~0.4.3"
+    "tap": "~0.4.3",
+    "tape": "~2.3.0"
   },
   "keywords": [
     "format",
