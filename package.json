@@ -14,12 +14,12 @@
   "homepage": "https://github.com/thlorenz/format-json-stream",
   "dependencies": {
     "through": "~2.3.4",
-    "string2stream": "0.0.2",
-    "apply-transform": "~0.1.1"
+    "string2stream": "0.0.2"
   },
   "devDependencies": {
     "tap": "~0.4.3",
-    "tape": "~2.3.0"
+    "tape": "~2.3.0",
+    "apply-transform": "~0.1.1"
   },
   "keywords": [
     "format",
